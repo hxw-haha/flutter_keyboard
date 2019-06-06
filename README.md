@@ -11,3 +11,8 @@
  模式：数字键盘
  
  ![image](https://github.com/hxw-haha/flutter_keyboard/raw/master/数字键盘.png)
+ 
+ 
+ 实时回调：
+ 
+ ![image](https://github.com/hxw-haha/flutter_keyboard/raw/master/实时回调.png)
