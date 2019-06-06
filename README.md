@@ -1,25 +1,27 @@
 # flutter_keyboard
 
   
- void showRandomKeyboardWidget(
-  GlobalKey<ScaffoldState> scaffoldKey, {
-  @required BuildContext context,
-  ISucceedCallBack callback,
-  bool isNumberRandomFlag = false,
-  bool isLetterRandomFlag = false,
-  bool isClickCallFlag = true,
-  bool isObscureTextFlag = false,
-  bool isMoneyItemFlag = false,
-  int valueLength = defaultMaxLangth,
-  String inputValue = "",
-}) {
-//  if (callback != null) {
-//    callback.onStart(keyboardHeight);
-//  }
+ 调用方法：
+  
+     void showRandomKeyboardWidget(
+        GlobalKey<ScaffoldState> scaffoldKey, {
+       @required BuildContext context,
+        ISucceedCallBack callback,
+        bool isNumberRandomFlag = false,
+        bool isLetterRandomFlag = false,
+        bool isClickCallFlag = true,
+        bool isObscureTextFlag = false,
+        bool isMoneyItemFlag = false,
+        int valueLength = defaultMaxLangth,
+        String inputValue = "",
+      }) {
+      //  if (callback != null) {
+      //    callback.onStart(keyboardHeight);
+      //  }
 
-  /// 更改 _ModalBottomSheetRoute 类中 Color get barrierColor => const Color(0x01000000);
-  ///  showModalBottomSheet  点击空白地方会消失
-  showModalBottomSheet<void>(
+      /// 更改 _ModalBottomSheetRoute 类中 Color get barrierColor => const Color(0x01000000);
+     ///  showModalBottomSheet  点击空白地方会消失
+     showModalBottomSheet<void>(
     context: context,
     builder: (BuildContext context) {
       return RandomKeyboardWidget(
@@ -33,27 +35,28 @@
         inputValue: inputValue,
       );
     },
-  ).then((result) {
-    print("回掉了");
-//    if (callback != null) {
-//      callback.onFinish(keyboardHeight);
-//    }
-  });
+    ).then((result) {
+     print("回掉了");
+    //    if (callback != null) {
+    //      callback.onFinish(keyboardHeight);
+    //    }
+    });
 
-  /// showBottomSheet 点击空白地方不会消失
-//  scaffoldKey.currentState.showBottomSheet<void>((BuildContext context) {
-//    return RandomKeyboardWidget(
-//      callback: callback,
-//      isNumberRandomFlag: isNumberRandomFlag,
-//      isLetterRandomFlag: isLetterRandomFlag,
-//      isClickCallFlag: isClickCallFlag,
-//      isObscureTextFlag: isObscureTextFlag,
-//      isMoneyItemFlag: isMoneyItemFlag,
-//      valueLength: valueLength,
-//      inputValue: inputValue,
-//    );
-//  });
-}
+    /// showBottomSheet 点击空白地方不会消失
+    //  scaffoldKey.currentState.showBottomSheet<void>((BuildContext context) {
+    //    return RandomKeyboardWidget(
+    //      callback: callback,
+    //      isNumberRandomFlag: isNumberRandomFlag,
+    //      isLetterRandomFlag: isLetterRandomFlag,
+    //      isClickCallFlag: isClickCallFlag,
+    //      isObscureTextFlag: isObscureTextFlag,
+    //      isMoneyItemFlag: isMoneyItemFlag,
+    //      valueLength: valueLength,
+    //      inputValue: inputValue,
+    //    );
+    //  });
+    }
+  
 
  支持模式：
  
