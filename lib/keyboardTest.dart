@@ -120,6 +120,32 @@ class _MyAppState extends State<MyApp> implements ISucceedCallBack {
               },
               child: Text("随机数字键盘"),
             ),
+            RaisedButton(
+              onPressed: () {
+                Keyboard.showRandomLetterKeyboard(
+                    context: context,
+                    inputValue: textValue,
+                    isThenCall: true,
+                    onKeyboardCall: (value) {
+                      textValue = value;
+                      setState(() {});
+                    });
+              },
+              child: Text("字母+数字2.0"),
+            ),
+            RaisedButton(
+              onPressed: () {
+                Keyboard.showRandomNumberKeyboard(
+                    context: context,
+                    inputValue: textValue,
+                    isThenCall: true,
+                    onKeyboardCall: (value) {
+                      textValue = value;
+                      setState(() {});
+                    });
+              },
+              child: Text("数字2.0"),
+            ),
           ],
         ),
       ),
